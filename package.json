@@ -1,0 +1,11 @@
+{
+  "name": "ipsec_configuration",
+  "version": "1.0.0",
+  "description": "Takes a json configuration file and outputs commands used to configure an IPSEC tunne on an ATT vRouter 5600",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Bush",
+  "license": "MIT"
+}

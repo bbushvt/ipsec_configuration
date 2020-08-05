@@ -1,0 +1,56 @@
+{
+    "cfg-version": 1,
+    "esp-group": {
+        "name": "ESP_GROUP",
+        "lifetime": 3600,
+        "pfs": "dh-group5",
+        "proposals": [
+            {
+                "encryption": "aes256",
+                "hash": "sha1"
+            }
+        ]
+    },
+    "ike-group": {
+        "name": "IKE_GROUP",
+        "ike-version": 2,
+        "lifetime": 3600,
+        "proposals": [
+            {
+                "dh-group": 5,
+                "encryption": "aes256",
+                "hash": "sha1"
+            }
+        ]
+    },
+    "site-to-site": [
+        {
+            "peer": "72.83.221.109",
+            "pre-shared-secret": "secret-password",
+            "default-esp-group": "ESP-GROUP",
+            "ike-group": "IKE_GROUP",
+            "local-address": "169.60.155.250",
+            "tunnels": [
+                {
+                    "local prefix": "10.0.0.1/24",
+                    "remote prefix": "192.168.0.1/24",
+                    "esp-group": "ESP_GROUP"
+                }
+            ]
+        },
+        {
+            "peer": "72.83.221.110",
+            "pre-shared-secret": "secret-password",
+            "default-esp-group": "ESP-GROUP",
+            "ike-group": "IKE_GROUP",
+            "local-address": "169.60.155.250",
+            "tunnels": [
+                {
+                    "local prefix": "10.0.0.1/24",
+                    "remote prefix": "192.168.0.1/24",
+                    "esp-group": "ESP_GROUP"
+                }
+            ]
+        }
+    ]
+}
